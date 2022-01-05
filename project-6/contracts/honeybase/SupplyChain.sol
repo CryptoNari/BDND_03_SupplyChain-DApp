@@ -218,7 +218,7 @@ contract SupplyChain is BeekeeperRole, DistributorRole, RetailerRole, ConsumerRo
     items[_upc].itemState = State.Processed;
     
     // Emit the appropriate event
-    emit Processed(_upc)
+    emit Processed(_upc);
   }
 
   // Define a function 'sellHoney' that allows a beekeeper to mark the honey 'ForSale'
@@ -253,7 +253,7 @@ contract SupplyChain is BeekeeperRole, DistributorRole, RetailerRole, ConsumerRo
     items[_upc].itemState = State.Sold;
     
     // Transfer money to beekeeper
-    payable(items[_upc.originBeekeeperID]).transfer(items[_upc].productPrice);
+    items[_upc].originBeekeeperID.transfer(items[_upc].productPrice);
     
     // emit the appropriate event
     emit Sold(_upc);
@@ -270,7 +270,7 @@ contract SupplyChain is BeekeeperRole, DistributorRole, RetailerRole, ConsumerRo
     // Update the appropriate fields
     items[_upc].itemState = State.Shipped;
     // address of retailer honey is shipped to
-    items[_upc].retailerID = shipTo; 
+    items[_upc].retailerID = _shipTo; 
     // Emit the appropriate event
     emit Sold(_upc);
   }
