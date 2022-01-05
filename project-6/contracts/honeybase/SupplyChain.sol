@@ -167,6 +167,7 @@ contract SupplyChain is BeekeeperRole, DistributorRole, RetailerRole, ConsumerRo
   // Define a function 'settleColony' that allows a beekeeper to mark the honey 'InProduction'
   function settleColony(
     uint _upc,
+    address _originBeekeeperID,
     string _originBeekeeperName,
     string _originColonyInformation,
     string  _originColonyLatitude,
@@ -177,7 +178,7 @@ contract SupplyChain is BeekeeperRole, DistributorRole, RetailerRole, ConsumerRo
     items[_upc].sku = sku;
     items[_upc].upc = _upc;
     items[_upc].ownerID = msg.sender;
-    items[_upc].originBeekeeperID = msg.sender;
+    items[_upc].originBeekeeperID = _originBeekeeperID;
     items[_upc].originBeekeeperName = _originBeekeeperName;
     items[_upc].originColonyInformation = _originColonyInformation;
     items[_upc].originColonyLatitude = _originColonyLatitude;
