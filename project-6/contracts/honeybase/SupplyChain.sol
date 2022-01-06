@@ -273,7 +273,7 @@ contract SupplyChain is BeekeeperRole, DistributorRole, RetailerRole, ConsumerRo
     // address of retailer honey is shipped to
     items[_upc].retailerID = _shipTo; 
     // Emit the appropriate event
-    emit Sold(_upc);
+    emit Shipped(_upc);
   }
 
   // Define a function 'receiveHoney' that allows the retailer to mark the honey 'Received'
