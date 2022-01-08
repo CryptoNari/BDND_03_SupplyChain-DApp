@@ -9,7 +9,7 @@ contract('SupplyChain', function(accounts) {
     const ownerID = accounts[0]
     const originBeekeeperID = accounts[1]
     const originBeekeeperName = "John Doe"
-    const originColonyInformation = "Flying Sugar Bees"
+    const originColonyInformation = "Sweet flying Bees"
     const originColonyLatitude = "-38.239770"
     const originColonyLongitude = "144.341490"
     let productID = sku + upc
