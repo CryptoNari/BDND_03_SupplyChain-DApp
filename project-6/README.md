@@ -23,9 +23,9 @@ $ npm install
 
 **Truffle**(v5.4.24 (core: 5.4.24)): Smart Contract developing, testing and deploying.
 
-**Solidity**(0.4.24 (solc-js)): Smart Contract Version
+**Solidity**(0.4.24 (solc-js)): Implementing Smart Contracts
 
-**Web3.js**(v1.5.3)
+**Web3.js**(v1.5.3): Interaction with a local or remote ethereum node using HTTP, IPC or WebSocket.
 
 
 
